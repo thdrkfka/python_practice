@@ -78,3 +78,9 @@ print(list(squared_numbers))
 numbers2 = [1,2,3,4,5,6]
 even_number = filter(lambda x : x%2 == 0, numbers2)
 print(list(even_number))
+
+
+# 정렬
+points = [(1,2),(3,1),(5,-1)]
+sorted_points = sorted(points, key=lambda x : x[1]) # (1,"2"),(3,"1"),(5,"-1") x[1] 인덱스 1번쨰의 수로 오름차순 정렬
+print(sorted_points)
