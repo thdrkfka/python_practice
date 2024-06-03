@@ -44,4 +44,3 @@ match drink:
     price = 0
 
 print(str(price) + '원을 투입해주세요.')
-
