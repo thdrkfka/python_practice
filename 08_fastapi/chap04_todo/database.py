@@ -2,8 +2,8 @@
 
 # 데이터베이스 연결 객체 만듬
 
-from sqlachemy import create_engine
-from sqlachemy.orm import sessionmaker
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 # 파이썬에서 가장 많이 사용되는 "내장 DB 라이브러리"
