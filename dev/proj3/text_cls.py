@@ -1,4 +1,4 @@
-# hugginface/transformers => 자연어 # model을 알아서 다운받아줌. -> user/.chache/huggingface
+# hugginface/transformers => 자연어 # model을 알아서 다운받아줌. -> user/.chache/huggingface # docs - huggingface에서 제공하는 예제 model
 
 # huggingface 에서의 Step5
 # Step 1. import modules # 모듈 import
@@ -7,11 +7,11 @@ from transformers import pipeline
                                         # sequence 단위의 데이터를 분류
 
 # Step 2. create inference isinstance # 추론기 생성
-classifier = pipeline("sentiment-analysis", model="stevhliu/my_awesome_model") # 긍/부정 분류
+classifier = pipeline("sentiment-analysis", model="snunlp/KR-FinBert-SC") # 긍/부정 분류
             #  pipeline (task 이름, model 이름)
 
 # Step 3. prepare input data # 입력값 준비
-text = "bad request."
+text = "[오늘의 주목주] '최태원 TSMC와 회담'에 SK 10%대 상승, 에스티팜 15% 뛰어"
 
 # Step 4. infrence # 추론
 result = classifier(text)
