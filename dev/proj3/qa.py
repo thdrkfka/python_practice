@@ -2,7 +2,7 @@
 from transformers import pipeline
 
 # step2 create inference isinstance
-question_answerer = pipeline("question-answering", model="my_awesome_qa_model")
+question_answerer = pipeline("question-answering", model="stevhliu/my_awesome_qa_model")
 
 # step3 prepare input data
 question = "How many programming languages does BLOOM support?"
