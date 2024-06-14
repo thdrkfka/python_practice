@@ -2,7 +2,6 @@
 
 from sqlalchemy import *
 from .database import Base
-import datetime
 
 class Test(Base):
     __tablename__ = "test"
