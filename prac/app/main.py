@@ -6,15 +6,15 @@ from fastapi import *
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
-from .database import engine, get_db
-from .models import Test
+from .database import engine, get_db, Base
+from .models import User, Managing
 
 app = FastAPI()
 templates = Jinja2Templates(directory="app/templates")
 
 @app.on_event("startup")
 def on_startup():
-    Test.metadata.create_all(bind=engine)
+    Base.metadata.create_all(bind=engine)
 
 @app.get("/")
 async def read_root(request: Request, db: Session = Depends(get_db)):
