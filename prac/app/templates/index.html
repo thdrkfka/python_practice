@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Items</title>
+</head>
+<body>
+    <h1>Test Items</h1>
+    <ul>
+        {% for item in items %}
+        <li>{{ item.name }}: {{ item.number }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
